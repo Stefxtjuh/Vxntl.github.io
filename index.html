@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vxntl || Main</title>
+
+        <meta charset = "utf-8">
+        <link rel="icon" href=https://cdn.discordapp.com/attachments/940353025057378414/972880783591223386/moon.png?size=4096">
+        <link rel="stylesheet" href="/styles.css">
+        
+
+        <style>
+            body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: "Trebuchet MS";
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(45,45,45);
+    color: rgb(40, 40, 40);
+}
+
+#Image {
+    margin-top: 20px;
+    height: 90px;
+}
+
+#scriptBtn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 45, 45);
+    margin-top: 45px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 650px;
+    height: 35px;
+}
+
+#copyPopup {
+    color: rgb(255,255,255);
+    background-color: rgb(50, 50, 50);
+    border: 0px;
+    border-radius: 4px;
+    text-align: center;
+    position: absolute;
+    display: none;
+    width: 150px;
+    height: 35px;
+}
+
+#gamesBtn {
+    background-color: rgb(30,30,30); 
+    color: rgb(255, 255, 255); 
+    font-size: large; 
+    border: 0px; 
+    border-radius: 2px;
+    cursor: pointer; 
+    width: 100px; 
+    height: 50px;
+}
+
+#discordBtn {
+    background-color: rgb(30,30,30); 
+    color: rgb(255, 255, 255); 
+    font-size: large; 
+    border: 0px; 
+    border-radius: 2px;
+    cursor: pointer; 
+    width: 100px; 
+    height: 50px;
+}
+
+#LongLine {
+    margin-top: 45px;
+    border: 1px solid rgb(150, 15, 150);
+    width: 500px;
+    height: 0px;
+}
+
+#copyBtn:hover {
+    background-color: rgb(70, 70, 70);
+}
+        </style>
+    </head>
+    <body>
+        <input type="text" value="Copied to clipboard!" readonly id="copyPopup">
+        <center>
+            <br>
+            <button id="scriptBtn"><span style="color: rgb(78, 153, 204);">loadstring</span>(game:<span style="color: rgb(78, 153, 204);">HttpGet</span>(<span style="color: rgb(80, 179, 179);">"</span><span style="color: rgb(149, 199, 144);">https://raw.githubusercontent.com/Stefxtjuh/vxntl/main/Loader.lua</span><span style="color: rgb(80, 179, 179);">"</span>))();</button>
+            <br>
+            <div id="LongLine"></div>
+            <br>
+            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">What is vxntl?</h1>
+            <h3 style="color: rgb(180, 180, 180);">Vxntl is a roblox script that supports many roblox game types: tycoons, simulators and more!! <br> if you want to know what games <b>VXNTL</b> supports click the button down below!</h3>
+            <br>
+            <button id="gamesBtn">games</button>
+            <br>
+            <div id="LongLine"></div>
+            <br>
+            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Exploits</h1>
+            <h3 style="color: rgb(180, 180, 180);"><a href="https://x.synapse.to/" target = "_blank" style="color: rgb(180, 180, 180);">Synapse X</a><br><br><a href="https://www.asshurthosting.pw/" target = "_blank" style="color: rgb(180, 180, 180);">Sirhurt</a></h3>
+            <div id="LongLine"></div>
+            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(114, 137, 218);">Discord</h1>
+            <button id="discordBtn">JOIN</button>
+            <br>
+            <br>
+            <br>
+        </center>
+
+        <script type="text/javascript">
+            const scriptBtn = document.getElementById("scriptBtn");
+            const copyPopup = document.getElementById("copyPopup");
+            const gamesBtn = document.getElementById("gamesBtn");
+            const discordBtn = document.getElementById("discordBtn");
+
+            scriptBtn.addEventListener("click", () => {
+                const scriptBox = document.createElement("textarea");
+                scriptBox.value = 'https://raw.githubusercontent.com/Stefxtjuh/vxntl/main/Loader.lua';
+                document.body.appendChild(scriptBox);
+                scriptBox.select();
+                document.execCommand("copy");
+                document.body.removeChild(scriptBox);
+                copyPopup.style.display = "block";
+                setTimeout(() => {copyPopup.style.display = "none";}, 1000);
+            });
+
+            gamesBtn.addEventListener("click", () => {
+                window.open("/v2/index.html");
+            });
+
+            discordBtn.addEventListener("click", () => {
+                window.open("https://discord.gg/FJmaX4X");
+            });
+        </script>
+    </body>
+</html>
